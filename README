@@ -1,0 +1,5 @@
+
+with command 'node server'
+
+calculator api is running on port 3001
+codeBreaker api is running on port 3000

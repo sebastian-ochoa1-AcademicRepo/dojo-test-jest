@@ -78,3 +78,13 @@ test('sends 6489 and returns XXXX', () => {
     var result = cb.breakCode('6489')   //Ejecutar
     expect(result).toBe('XXXX');        //Assert
 });
+
+test('sends 6489 and returns diferent from XXXX', () => {
+    cb.setRandomSecret();
+    var result = cb.breakCode('6489')   //Ejecutar
+    while (result === 'XXXX') {
+        cb.setRandomSecret();
+        var result = cb.breakCode('6489')   //Ejecutar
+    }
+    expect(result).not.toBe('XXXX');        //Assert
+});

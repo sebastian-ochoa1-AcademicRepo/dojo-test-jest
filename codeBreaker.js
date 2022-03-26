@@ -21,5 +21,10 @@ function setSecret(num){
     secret = num;
 }
 
+function setRandomSecret(){
+    secret = ''+Math.floor(Math.random() * (9999 - 1000) + 1000);
+}
+
 module.exports.breakCode = breakCode;
 module.exports.setSecret = setSecret;
+module.exports.setRandomSecret = setRandomSecret;

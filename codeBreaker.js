@@ -1,10 +1,9 @@
-const { result } = require("lodash");
-
-const secret = '6489';
+var secret = ''+Math.floor(Math.random() * (9999 - 1000) + 1000);
 const correctPosition = 'X';
 const correctNumOffPosition = '-';
 
-function codeBreaker(input){
+
+function breakCode(input){
     var result = '';
     for(var i=0; i<secret.length;i++){
         if(input.includes(secret.charAt(i))) {  
@@ -18,4 +17,9 @@ function codeBreaker(input){
     return result;
 }
 
-module.exports.codeBreaker = codeBreaker;
+function setSecret(num){
+    secret = num;
+}
+
+module.exports.breakCode = breakCode;
+module.exports.setSecret = setSecret;

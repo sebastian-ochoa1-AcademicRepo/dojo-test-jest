@@ -22,6 +22,7 @@ app.get('/codebreaker', async function(req, res) {
 });
 
 app.get('/reset', async function(req, res) {
+    let pet = req;
     cb.setRandomSecret();
     intentos = 0;
     res.setHeader("Access-Control-Allow-Origin", "*");

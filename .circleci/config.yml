@@ -8,6 +8,22 @@ orbs:
   # See the orb documentation here: https://circleci.com/developer/orbs/orb/circleci/node
   node: circleci/node@4.7
   heroku: circleci/heroku@0.0.10
+    parameters:
+    api-key:
+      default: d7d679b0-239a-4883-b768-17ca40233593
+      description: The name of the environment variable containing your Heroku API Key.
+      type: env_var_name
+    app-name:
+      default: circleci-dojo
+      description: >-
+        The name of your Heroku App. For backwards compatibility the literal value
+        `$HEROKU_APP_NAME` is the default, so you can easily use this command by
+        setting an environment variable called HEROKU_APP_NAME
+      type: string
+    branch:
+      default: main
+      description: Deploy the given branch. The default value is your current branch.
+      type: string
 
 jobs:
   # Below is the definition of your job to build and test your app, you can rename and customize it as you want.

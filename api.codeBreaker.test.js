@@ -51,6 +51,7 @@ describe("testing /codeBreaker path", () => {
     });
 })
 
+/*
 describe("testing /reset path", () => {
 
     beforeEach(() => {
@@ -110,3 +111,4 @@ describe("testing /reset path", () => {
         });
     });
 })
+*/

@@ -10,17 +10,6 @@ var intentos = 0;
 //});
 
 
-app.get('/codebreaker', async function(req, res) {
-    intentos = intentos + 1;
-    let code = req.query.code;
-    var resultCB = cb.breakCode(code)
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.json({
-        result: resultCB,
-        attempts: intentos
-    });
-});
-
 app.get('/reset', async function(req, res) {
     let pet = req;
     cb.setRandomSecret();
@@ -28,6 +17,17 @@ app.get('/reset', async function(req, res) {
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.json({
         result: "Reiniciado correctamente",
+        attempts: intentos
+    });
+});
+
+app.get('/codebreaker', async function(req, res) {
+    intentos = intentos + 1;
+    let code = req.query.code;
+    var resultCB = cb.breakCode(code)
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.json({
+        result: resultCB,
         attempts: intentos
     });
 });

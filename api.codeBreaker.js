@@ -16,7 +16,7 @@ app.get('/reset', async function(req, res) {
     intentos = 0;
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.json({
-        result: "Reiniciado correctamente",
+        result: 'Reiniciado correctamente',
         attempts: intentos
     });
 });

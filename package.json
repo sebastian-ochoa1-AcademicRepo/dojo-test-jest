@@ -8,6 +8,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "cors": "^2.8.5",
     "jest": "^27.5.1",
     "supertest": "^6.2.2"
   },
@@ -50,7 +51,6 @@
     "combined-stream": "^1.0.8",
     "concat-map": "^0.0.1",
     "convert-source-map": "^1.8.0",
-    "cors": "^2.8.5",
     "cross-spawn": "^7.0.3",
     "cssom": "^0.4.4",
     "cssstyle": "^2.3.0",

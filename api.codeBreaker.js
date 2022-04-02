@@ -22,9 +22,9 @@ app.get('/codebreaker', async function(req, res) {
 });
 
 app.get('/reset', async function(req, res) {
-    res.setHeader("Access-Control-Allow-Origin", "*");
     cb.setRandomSecret();
     intentos = 0;
+    res.setHeader("Access-Control-Allow-Origin", "*");
     res.json({
         result: "Reiniciado correctamente",
         attempts: intentos

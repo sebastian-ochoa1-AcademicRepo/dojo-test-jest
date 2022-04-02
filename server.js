@@ -5,7 +5,7 @@ apiCalculator.listen(3001, () => {
     console.log("running calculator")
 });
 
-apiCodeBreaker.listen(3000, () => {
+apiCodeBreaker.listen(3002, () => {
     console.log("running codeBreaker")
 });
 

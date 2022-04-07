@@ -9,10 +9,7 @@ orbs:
   node: circleci/node@4.7
   heroku: circleci/heroku@0.0.10
     parameters:
-    api-key:
-      default: d7d679b0-239a-4883-b768-17ca40233593
-      description: The name of the environment variable containing your Heroku API Key.
-      type: env_var_name
+
     app-name:
       default: circleci-dojo
       description: >-
